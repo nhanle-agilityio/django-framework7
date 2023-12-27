@@ -1,20 +1,75 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {% load bootstrap5 %} {% load static %} {% bootstrap_css %} {% bootstrap_javascript %}
-    <!-- <link type="text/css" rel="stylesheet" href="{%static 'css/style.css' %}" /> -->
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>My App</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel = "stylesheet" 
+         href = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.min.css" />
+    <link rel = "stylesheet" 
+         href = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.colors.min.css" />
+    <!-- {% load bootstrap5 %} {% load static %} {% bootstrap_css %} {% bootstrap_javascript %} -->
   </head>
-  <body data-bs-theme="dark">
-    <header>
-        <nav class="navbar navbar-dark bg-primary">
-            <div class="container">
-                <a href='{% url "index" %}'>
-                    <h1 class="text-light">Task Manager</h1>
-                </a>
-            </div>
-          </nav>
-    </header>
+  <body>
+    <!-- <div class="container pt-4">{% block content %}{% endblock content %}</div> -->
 
-    <div class="container pt-4">{% block content %}{% endblock content %}</div>
+    <!-- App root element -->
+    <!-- <div id="app"> -->
+      <div class = "statusbar-overlay"></div>
+      <div class = "panel-overlay"></div>
+      
+      <div class = "panel panel-right panel-reveal">
+         <div class = "content-block">
+            <p>Contents goes here...</p>
+         </div>
+      </div>
+
+      <div class = "views">
+        <div class = "view view-main">
+           <div class = "navbar">
+              <div class = "navbar-inner">
+                 <div class = "center sliding">My App</div>
+                 <div class = "right">
+                    <a href = "#" class = "link icon-only open-panel">
+                       <i class = "icon icon-bars"></i>
+                    </a>
+                 </div>
+              </div>
+           </div>
+           
+           <div class = "pages navbar-through toolbar-through">
+              <div data-page = "index" class = "page">
+                 <div class = "page-content">
+                    <p>This is simple application...</p>
+                 </div>
+              </div>
+           </div>
+           
+           <div class = "toolbar">
+              <div class = "toolbar-inner">
+                 <a href = "#" class = "link">First Link</a>
+                 <a href = "#" class = "link">Second Link</a>
+              </div>
+           </div>
+        </div>
+     </div>
+    <!-- </div> -->
+
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type = "text/javascript" 
+         src = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/js/framework7.min.js"></script>
+    <script>
+      // here initialize the app
+      var myApp = new Framework7();
+
+
+      // Add the view
+      // var mainView = myApp.addView('.view-main', {
+      //    dynamicNavbar: true
+      // });
+   </script>
   </body>
 </html>
