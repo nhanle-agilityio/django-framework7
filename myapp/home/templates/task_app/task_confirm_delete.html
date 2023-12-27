@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block content %}
+<h2>Confirm Delete</h2>
+<p>Are you sure you want to delete "{{ object.name }}"?</p>
+<form method="POST" class="d-flex" style="gap: 15px">
+  {% csrf_token %}
+  <button
+    type="submit"
+    class="btn-danger rounded"
+    style="width: 100px; height: 40px"
+  >
+    Delete
+  </button>
+  <button
+    type="button"
+    onclick="location.href='{% url 'index' %}'"
+    class="btn-secondary rounded"
+    style="width: 100px; height: 40px"
+  >
+    Cancel
+  </button>
+</form>
+{% endblock %}
