@@ -1,5 +1,5 @@
 from django import forms
-from home.models.task import Task
+from task.models.task import Task
 
 # Task status
 TO_DO, IN_PROGRESS, READY_FOR_TEST, DONE = ('to-do', 'in-progress', 'ready-for-test', 'done')

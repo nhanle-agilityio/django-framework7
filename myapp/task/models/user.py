@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from home.models.task import Task
+from task.models.task import Task
 
 
 class UserProfile(models.Model):

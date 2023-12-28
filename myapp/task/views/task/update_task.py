@@ -1,4 +1,4 @@
-from home.models.task import Task
+from task.models.task import Task
 from django.views.generic import UpdateView
 
 

@@ -1,5 +1,5 @@
 from django.views.generic import DetailView
-from home.models.task import Task
+from task.models.task import Task
 
 
 # Create your views here.

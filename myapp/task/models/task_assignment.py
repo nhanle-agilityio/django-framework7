@@ -1,6 +1,6 @@
 from django.db import models
-from home.models.task import Task
-from home.models.user import UserProfile
+from task.models.task import Task
+from task.models.user import UserProfile
 
 
 class TaskAssignment(models.Model):

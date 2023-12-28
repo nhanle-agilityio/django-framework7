@@ -1,7 +1,7 @@
 from django.forms import BaseModelForm
 from django.http import HttpResponse
 from django.views.generic import CreateView
-from home.forms.task_form import TaskForm
+from task.forms.task_form import TaskForm
 
 
 class CreateTaskView(CreateView):
