@@ -5,5 +5,5 @@ from home.models.task import Task
 # Create your views here.
 class TaskDetailView(DetailView):
     model = Task
-    template_name = 'task_detail/index.html'
+    template_name = 'task/task_detail.html'
     context_object_name = 'detail'

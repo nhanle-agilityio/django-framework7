@@ -2,7 +2,7 @@
 <h2 class="text-center pb-2 text-uppercase">All my Task</h2>
 {% endif %}
 <div>
-  <a href="{% url 'task-add' %}" class="btn btn-success">Add New Task</a>
+  <a href="{% url 'create-task' %}" class="btn btn-success">Add New Task</a>
 </div>
 <ul class="list-unstyled">
   {% for task in object_list %}
@@ -24,13 +24,13 @@
     >
       <button
         class="py-1 px-4 rounded bg-primary text-white"
-        onclick="location.href='{% url 'task-edit' task.id %}'"
+        onclick="location.href='{% url 'update-task' task.id %}'"
       >
         Edit
       </button>
       <div
         class="py-1 px-4 rounded bg-danger text-white"
-        onclick="location.href='{% url 'task-delete' task.id %}'"
+        onclick="location.href='{% url 'delete-task' task.id %}'"
       >
         Delete
       </div>
