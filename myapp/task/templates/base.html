@@ -7,29 +7,74 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>My App</title>
     <!-- Path to Framework7 Library Bundle CSS -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/framework7@8.3.0/framework7-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7-icons@5.0.5/css/framework7-icons.min.css"> -->
-    {% load bootstrap5 %} {% load static %} {% bootstrap_css %} {% bootstrap_javascript %}
+    <link rel="stylesheet" href="https://unpkg.com/framework7@8.3.0/framework7-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7-icons@5.0.5/css/framework7-icons.min.css">
+    <!-- {% load bootstrap5 %} {% load static %} {% bootstrap_css %} {% bootstrap_javascript %} -->
   </head>
   <body>
-    <div class="container pt-4">{% block content %}{% endblock content %}</div>
+    <!-- <div class="container pt-4">{% block content %}{% endblock content %}</div> -->
 
     <!-- App root element -->
-    <!-- <div id="app">
+    <div id="app">
       <div id="view-container" class="views tabs">
+        <!-- Tab bar -->
+        <div class="toolbar tabbar-icons toolbar-bottom">
+          <div class="toolbar-inner">
+            <a href="#tab-responses" class="tab-link tab-link-active">
+              <i class="icon icon-fill icon f7-icons if-not-md">bolt_fill<span class="badge color-red">5</span></i>
+              <span class="tabbar-label">Responses</span>
+            </a>
+            <a href="#tab-assignments" class="tab-link">
+              <i class="icon icon f7-icons if-not-md">tray_full_fill</i>
+              <span class="tabbar-label">Assignments</span>
+            </a>
+            <a href="#tab-settings" class="tab-link">
+              <i class="icon icon f7-icons if-not-md">building_2_fill</i>
+              <span class="tabbar-label">Settings</span>
+            </a>  
+          </div>
+        </div>
+
+        <div class="view view-main tab tab-active" id="tab-task">
+          <div class="view view-init view-main" data-url="/task/">
+
+          </div>
+        </div>
+
+        <div class="view tab" id="tab-assignments">
+          <div class="view view-init view-main"></div>
+        </div>
+
+        <div id="tab-settings" class="view tab">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title" style="left: 0px;">Settings</div>
+            </div>
+          </div>
+          <div class="pages navbar-fixed">
+            <div data-page="home-3" class="page">
+              <div class="page-content">
+                <div class="block">
+                  <p>Settings</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-   </div> -->
+    </div>
 
     <!-- Path to Framework7 Library Bundle JS-->
-    <!-- <script src="https://unpkg.com/framework7@8.3.0/framework7-bundle.min.js"></script> -->
+    <script src="https://unpkg.com/framework7@8.3.0/framework7-bundle.min.js"></script>
 
     <script>
-    //   var app = new Framework7({
-    //   el: '#app',
-    //   routes: [
+      var app = new Framework7({
+      el: '#app',
+      routes: [
+        // { path: '/task/', url: '{% url "task-list" %}' },
 
-    //   ],
-    // });
+      ],
+    });
    </script>
   </body>
 </html>
