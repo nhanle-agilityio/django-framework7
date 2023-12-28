@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>My App</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/framework7@8.3.0/framework7-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7-icons@5.0.5/css/framework7-icons.min.css"> -->
+    {% load bootstrap5 %} {% load static %} {% bootstrap_css %} {% bootstrap_javascript %}
+  </head>
+  <body>
+    <div class="container pt-4">{% block content %}{% endblock content %}</div>
+
+    <!-- App root element -->
+    <!-- <div id="app">
+      <div id="view-container" class="views tabs">
+      </div>
+   </div> -->
+
+    <!-- Path to Framework7 Library Bundle JS-->
+    <!-- <script src="https://unpkg.com/framework7@8.3.0/framework7-bundle.min.js"></script> -->
+
+    <script>
+    //   var app = new Framework7({
+    //   el: '#app',
+    //   routes: [
+
+    //   ],
+    // });
+   </script>
+  </body>
+</html>
